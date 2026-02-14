@@ -16,7 +16,7 @@
     --warm-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
     --ocean-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --dark-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-    
+
     /* Neutrals */
     --bg-primary: #0a0a0f;
     --bg-secondary: #16161f;
@@ -27,7 +27,7 @@
     --text-muted: #787891;
     --accent: #667eea;
     --accent-bright: #8b9eff;
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -36,11 +36,11 @@
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
     --spacing-3xl: 6rem;
-    
+
     /* Typography */
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
-    
+
     /* Borders & Shadows */
     --border-radius: 1.25rem;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -82,15 +82,22 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
     animation: pulse 8s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .hero-content {
@@ -144,6 +151,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
+    text-decoration: none;
+    display: block;
 }
 
 .scroll-arrow {
@@ -160,6 +169,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -167,12 +177,19 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
+
     40% {
         transform: translateX(-50%) translateY(-10px);
     }
+
     60% {
         transform: translateX(-50%) translateY(-5px);
     }
@@ -205,20 +222,44 @@ body {
     box-shadow: var(--shadow-glow);
 }
 
-.location-card:nth-child(1) { --card-index: 0; }
-.location-card:nth-child(2) { --card-index: 1; }
-.location-card:nth-child(3) { --card-index: 2; }
-.location-card:nth-child(4) { --card-index: 3; }
-.location-card:nth-child(5) { --card-index: 4; }
-.location-card:nth-child(6) { --card-index: 5; }
-.location-card:nth-child(7) { --card-index: 6; }
-.location-card:nth-child(8) { --card-index: 7; }
+.location-card:nth-child(1) {
+    --card-index: 0;
+}
+
+.location-card:nth-child(2) {
+    --card-index: 1;
+}
+
+.location-card:nth-child(3) {
+    --card-index: 2;
+}
+
+.location-card:nth-child(4) {
+    --card-index: 3;
+}
+
+.location-card:nth-child(5) {
+    --card-index: 4;
+}
+
+.location-card:nth-child(6) {
+    --card-index: 5;
+}
+
+.location-card:nth-child(7) {
+    --card-index: 6;
+}
+
+.location-card:nth-child(8) {
+    --card-index: 7;
+}
 
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -251,13 +292,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.3) 0%,
-        transparent 30%,
-        transparent 70%,
-        rgba(0, 0, 0, 0.6) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            transparent 30%,
+            transparent 70%,
+            rgba(0, 0, 0, 0.6) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
     display: flex;
@@ -288,6 +327,7 @@ body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -438,25 +478,25 @@ body {
     .hero {
         min-height: 80vh;
     }
-    
+
     .gallery {
         padding: var(--spacing-xl) var(--spacing-md);
         gap: var(--spacing-lg);
     }
-    
+
     .location-details {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-note {
         text-align: center;
     }
-    
+
     .hero-meta {
         gap: var(--spacing-sm);
     }
@@ -466,11 +506,11 @@ body {
     .card-content {
         padding: var(--spacing-md);
     }
-    
+
     .location-number {
         font-size: 1.5rem;
     }
-    
+
     .location-name {
         font-size: 1.5rem;
     }
