@@ -471,6 +471,176 @@ body {
 }
 
 /* ====================================
+   ROUTE & ITINERARY SECTION
+   ==================================== */
+
+.route-section {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin-bottom: var(--spacing-xs);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.route-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-xl);
+    background: var(--bg-card);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.map-container {
+    height: 600px;
+    border-radius: calc(var(--border-radius) / 2);
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.itinerary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Custom scrollbar for itinerary */
+.itinerary::-webkit-scrollbar {
+    width: 6px;
+}
+
+.itinerary::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.itinerary::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.itinerary-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: calc(var(--border-radius) / 4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid transparent;
+}
+
+.itinerary-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.itinerary-item.active {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: var(--accent);
+}
+
+.time {
+    font-weight: 700;
+    color: var(--accent-bright);
+    font-size: 0.9rem;
+    min-width: 50px;
+}
+
+.itinerary-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.itinerary-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    color: var(--text-primary);
+}
+
+.itinerary-info p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* Leaflet Dark Mode Adjustment */
+.leaflet-container {
+    background: var(--bg-primary) !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border-radius: 0.5rem !important;
+}
+
+.custom-marker {
+    background: var(--accent);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Response for Route Section */
+@media (max-width: 1024px) {
+    .route-container {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .itinerary {
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* ====================================
    RESPONSIVE DESIGN
    ==================================== */
 

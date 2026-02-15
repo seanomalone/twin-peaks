@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -341,6 +343,85 @@
         </article>
     </main>
 
+    <!-- Route & Itinerary Section -->
+    <section id="route" class="route-section">
+        <div class="section-header">
+            <h2 class="section-title">Photowalk Itinerary</h2>
+            <p class="section-subtitle">A timed route optimized for the best lighting conditions.</p>
+        </div>
+
+        <div class="route-container">
+            <div id="map" class="map-container"></div>
+
+            <div class="itinerary">
+                <div class="itinerary-item" data-location="2">
+                    <div class="time">08:00</div>
+                    <div class="itinerary-dot"></div>
+                    <div class="itinerary-info">
+                        <h4>Embarcadero</h4>
+                        <p>Morning light over the bay</p>
+                    </div>
+                </div>
+                <div class="itinerary-item" data-location="4">
+                    <div class="time">09:30</div>
+                    <div class="itinerary-dot"></div>
+                    <div class="itinerary-info">
+                        <h4>Bayview</h4>
+                        <p>Clear southern morning views</p>
+                    </div>
+                </div>
+                <div class="itinerary-item" data-location="7">
+                    <div class="time">11:00</div>
+                    <div class="itinerary-dot"></div>
+                    <div class="itinerary-info">
+                        <h4>Ocean Beach (North)</h4>
+                        <p>Coastal morning mist</p>
+                    </div>
+                </div>
+                <div class="itinerary-item" data-location="6">
+                    <div class="time">12:30</div>
+                    <div class="itinerary-dot"></div>
+                    <div class="itinerary-info">
+                        <h4>Ocean Beach (South)</h4>
+                        <p>Midday dunes and waves</p>
+                    </div>
+                </div>
+                <div class="itinerary-item" data-location="8">
+                    <div class="time">14:00</div>
+                    <div class="itinerary-dot"></div>
+                    <div class="itinerary-info">
+                        <h4>Outer Richmond</h4>
+                        <p>Early afternoon residential vistas</p>
+                    </div>
+                </div>
+                <div class="itinerary-item" data-location="1">
+                    <div class="time">15:30</div>
+                    <div class="itinerary-dot"></div>
+                    <div class="itinerary-info">
+                        <h4>Pacific Heights</h4>
+                        <p>Golden hour lighting starts</p>
+                    </div>
+                </div>
+                <div class="itinerary-item" data-location="5">
+                    <div class="time">17:00</div>
+                    <div class="itinerary-dot"></div>
+                    <div class="itinerary-info">
+                        <h4>Excelsior</h4>
+                        <p>Late afternoon urban energy</p>
+                    </div>
+                </div>
+                <div class="itinerary-item" data-location="3">
+                    <div class="time">18:30</div>
+                    <div class="itinerary-dot"></div>
+                    <div class="itinerary-info">
+                        <h4>Mission Bay</h4>
+                        <p>Blue hour and city lights</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -355,6 +436,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="script.js"></script>
 </body>
 
