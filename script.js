@@ -91,19 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Interactive Map Logic ---
     const locations = [
-        { id: 1, name: "Pacific Heights", coords: [37.7926, -122.4377] },
-        { id: 2, name: "Embarcadero", coords: [37.7945, -122.3915] },
-        { id: 3, name: "Mission Bay", coords: [37.7705, -122.3895] },
-        { id: 4, name: "Bayview", coords: [37.7297, -122.3892] },
-        { id: 5, name: "Excelsior", coords: [37.7246, -122.4277] },
-        { id: 6, name: "Ocean Beach (South)", coords: [37.7246, -122.5082] },
-        { id: 7, name: "Ocean Beach (North)", coords: [37.7593, -122.5107] },
-        { id: 8, name: "Outer Richmond", coords: [37.7794, -122.5094] }
+        { id: 1, name: "Embarcadero", coords: [37.7945, -122.3915] },
+        { id: 2, name: "Bayview", coords: [37.7297, -122.3892] },
+        { id: 3, name: "Ocean Beach (North)", coords: [37.7593, -122.5107] },
+        { id: 4, name: "Ocean Beach (South)", coords: [37.7246, -122.5082] },
+        { id: 5, name: "Outer Richmond", coords: [37.7794, -122.5094] },
+        { id: 6, name: "Pacific Heights", coords: [37.7926, -122.4377] },
+        { id: 7, name: "Excelsior", coords: [37.7246, -122.4277] },
+        { id: 8, name: "Mission Bay", coords: [37.7705, -122.3895] }
     ];
 
-    // Route sequence based on "Best Time"
-    const routeSequence = [2, 4, 7, 6, 8, 1, 5, 3];
-    const routeCoords = routeSequence.map(id => locations.find(loc => loc.id === id).coords);
+    // Route sequence is now linear (1-8)
+    const routeCoords = locations.map(loc => loc.coords);
 
     // Initialize Map
     if (document.getElementById('map')) {
