@@ -386,6 +386,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    transition: transform 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-2px);
 }
 
 .detail-label {
@@ -399,7 +404,26 @@ body {
 .detail-value {
     font-size: 0.875rem;
     color: var(--text-secondary);
-    font-weight: 500;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Specific styling for Best Time to make it look like a prominent tag */
+.location-card .detail-item:nth-child(2) .detail-value {
+    color: var(--accent-bright);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.location-card .detail-item:nth-child(2):hover .detail-value {
+    color: var(--text-primary);
+    text-shadow: 0 0 8px var(--accent);
+}
+
+.location-card .detail-item:nth-child(2) .detail-value::before {
+    content: '🕒';
+    font-size: 0.9rem;
 }
 
 .view-on-maps {
