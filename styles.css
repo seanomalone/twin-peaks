@@ -435,12 +435,34 @@ body {
     font-weight: 500;
     font-size: 0.9375rem;
     transition: all 0.3s ease;
-    padding: var(--spacing-sm) 0;
 }
 
 .view-on-maps:hover {
     color: var(--text-primary);
-    gap: var(--spacing-sm);
+    transform: translateX(5px);
+}
+
+.card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.view-image-source {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.view-image-source:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
 }
 
 /* ====================================
